@@ -1,64 +1,71 @@
 /**
- * VeeWordle Configuration
- * Matched precisely to the reference mobile designs
+ * VeeWordle / a little us Configuration
+ * Matched precisely to the Figma designs
  */
 
 export const dateConfig = {
-  appName: "VeeWordle",
-  brandHeart: true,
+  appName: "a little us",
+  headerTagline: "A little love, in five clues",
   footerText: "made with love, just for you",
+  footerRight: "OUR LITTLE NOVEMBER STORY · 2026",
 
   // 1. Start Screen
   startScreen: {
-    kicker: "hello langga",
-    title: "little game lang po :D",
-    description: "bagong website nanaman ano kaya to, sana hindi ka pa nagsasawa sa mga websites ko :((",
+    kicker: "FIVE LITTLE CLUES. ONE BIG QUESTION.",
+    title: "I made you something",
+    description: "A little game about our favorite things. Follow the clues — there's something sweet waiting at the end.",
     buttonText: "Start",
-    subtext: "5 puzzles about us, very easy to promise hehe",
+    subtext: "5 puzzles · all about us · no rush",
+    pillBadge: "a small surprise, a whole lot of us",
   },
 
-  // 2. The Puzzles (5 attempts per puzzle matching reference images)
-  maxAttempts: 5,
+  // 2. The Puzzles (6 rows per puzzle)
+  maxAttempts: 6,
   puzzles: [
     {
       id: 1,
       number: "01",
-      answer: "MATCHA",
-      length: 6,
-      clue: "our fav thing to drink",
-      hint: "Starts with M (sweet & green 🍵)",
-    },
-    {
-      id: 2,
-      number: "02",
       answer: "FOODTRIP",
       length: 8,
+      title: "Our favorite way to date.",
       clue: "fave gawain pag dates",
       hint: "Starts with F (our bottomless appetite 🍜)",
     },
     {
+      id: 2,
+      number: "02",
+      answer: "POPUPS",
+      length: 6,
+      title: "Our go-to Nuvali stroll.",
+      clue: "go-to ganap sa Nuvali",
+      hint: "Starts with P (night booths at Nuvali 🎪)",
+    },
+    {
       id: 3,
       number: "03",
-      answer: "MOVIES",
+      answer: "MATCHA",
       length: 6,
-      clue: "what we always swore to go to pag may bagong papanoorin",
-      hint: "Starts with M (cinema & popcorn 🍿)",
+      title: "Our sweet daily obsession.",
+      clue: "our fav thing to drink",
+      hint: "Starts with M (sweet & green 🍵)",
     },
     {
       id: 4,
       number: "04",
-      answer: "PHOTOBOOTH",
-      length: 10,
-      clue: "what we always do at the end of every date",
-      hint: "Starts with P (cute film strips 📸)",
+      answer: "PICNIC",
+      length: 6,
+      title: "Something we've been longing for.",
+      clue: "something we've been longing to do",
+      hint: "Starts with P (mat, breeze & food 🧺)",
     },
     {
       id: 5,
       number: "05",
-      answer: "POPUPS",
-      length: 6,
-      clue: "go-to ganap sa Nuvali",
-      hint: "Starts with P (night booths at Nuvali 🎪)",
+      answer: "PHOTOBOOTH",
+      length: 10,
+      title: "Our favorite little tradition.",
+      clue: "what we always do at the end of every date",
+      hint: "Starts with P (cute film strips 📸)",
     },
   ],
 
@@ -70,21 +77,22 @@ export const dateConfig = {
     pillBadge: "my favorite chapter so far",
     message: "You know what time it is? I think it's time to celebrate a month of being together, officially :DD",
     buttonText: "Click to continue",
-    subtext: "Five little memories. So many more to make.",
+    subtext: "Five little memories, and so many more to make.",
   },
 
   // 4. The Big Question
   questionScreen: {
-    kicker: "ONE LAST LITTLE QUESTION",
+    kicker: "ONE LAST, VERY IMPORTANT QUESTION",
     calendarMonth: "NOVEMBER",
-    calendarDay: "03",
+    calendarDay: "07",
     calendarYear: "2026",
-    question: "Will you go on a date with me this November 3, 2026, a whole day to ourselves and no one to object?",
+    calendarFootnote: "A whole day, just us.",
+    question: "Will you go on a date with me this November 7, 2026, a whole day to ourselves and no one to object?",
     initialSubtitle: "One day. Just us.",
     dodgeSubtitles: [
       "Are you sure?",
       "Are you really sure? 🥺",
-      "Think about all the matcha and photobooths! 💕",
+      "Think about all the food trip and photobooths! 💕",
       "You really want to say no to me? 🙈",
     ],
     dodgeSideNotes: [
@@ -99,15 +107,16 @@ export const dateConfig = {
 
   // 5. Success / She Said Yes Screen
   yesScreen: {
+    kicker: "HERE'S TO OUR NEXT CHAPTER",
     title: "She said yes!!",
-    subtitle: "A whole day to look forward to.",
+    subtitle: "A whole day to look forward to. Just you, me, and our favorite things.",
     badge: "IT'S A DATE",
-    dateText: "November 3, 2026",
+    dateText: "November 7, 2026",
     buttonText: "Save the date",
     subtext: "Can't wait to make more memories with you.",
-    eventDate: "2026-11-03",
+    eventDate: "2026-11-07",
     eventTitle: "Our Date 💗",
-    eventDescription: "Celebrating 1 month of being together officially! An all-day date: Matcha, Food trip, Movies, Pop-ups at Nuvali, and Photobooth.",
+    eventDescription: "Celebrating 1 month of being together officially! An all-day date: Food trip, Pop-ups at Nuvali, Matcha, Picnic, and Photobooth.",
     eventLocation: "Nuvali & our favorite date spots",
   },
 
@@ -117,28 +126,28 @@ export const dateConfig = {
     subtitle: "A little wish list · all times & venues TBD",
     items: [
       {
-        id: "matcha",
-        title: "Matcha",
-        timeVenue: "Time TBD · Venue TBD",
-        icon: "coffee",
-      },
-      {
         id: "foodtrip",
         title: "Food trip",
         timeVenue: "Time TBD · Venue TBD",
         icon: "cutlery",
       },
       {
-        id: "movies",
-        title: "Movies",
-        timeVenue: "Time TBD · Venue TBD",
-        icon: "film",
-      },
-      {
         id: "popups",
         title: "Pop-ups at Nuvali",
         timeVenue: "Time TBD · Venue TBD",
         icon: "bag",
+      },
+      {
+        id: "matcha",
+        title: "Matcha",
+        timeVenue: "Time TBD · Venue TBD",
+        icon: "coffee",
+      },
+      {
+        id: "picnic",
+        title: "Picnic",
+        timeVenue: "Time TBD · Venue TBD",
+        icon: "basket",
       },
       {
         id: "photobooth",

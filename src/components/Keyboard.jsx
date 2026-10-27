@@ -56,37 +56,39 @@ export default function Keyboard({
     const status = letterStatuses[key];
 
     const base =
-      "min-h-[46px] sm:min-h-[50px] md:min-h-[56px] h-[46px] sm:h-[52px] md:h-[58px] rounded-xl md:rounded-2xl font-bold flex items-center justify-center transition-all select-none text-xs sm:text-sm md:text-base active:scale-95 focus:outline-none cursor-pointer";
+      "h-[38px] sm:h-[42px] md:h-[44px] rounded-lg font-black flex items-center justify-center transition-all select-none active:scale-95 focus:outline-none cursor-pointer shrink-0";
 
     if (key === "ENTER") {
-      return `${base} px-2 sm:px-4 md:px-5 bg-white text-[#3C2E35] border border-[#EEDFE4] hover:bg-pink-50/50 flex-[1.4] text-[10px] sm:text-xs md:text-sm tracking-tight`;
+      return `${base} px-2.5 sm:px-3 text-[10px] sm:text-xs bg-white text-[#3C2E35] border border-[#EEDFE4] hover:bg-pink-50/50 shadow-2xs`;
     }
     if (key === "BACKSPACE") {
-      return `${base} px-2 sm:px-4 md:px-5 bg-white text-[#3C2E35] border border-[#EEDFE4] hover:bg-pink-50/50 flex-[1.4]`;
+      return `${base} px-2.5 sm:px-3 bg-white text-[#3C2E35] border border-[#EEDFE4] hover:bg-pink-50/50 shadow-2xs`;
     }
 
+    const widthClass = "w-[29px] sm:w-[33px] md:w-[38px] text-xs sm:text-sm";
+
     if (status === "correct") {
-      return `${base} bg-[#EF88A6] text-white border-transparent flex-1 shadow-2xs hover:brightness-105`;
+      return `${base} ${widthClass} bg-[#EF88A6] text-white border-transparent shadow-2xs`;
     }
     if (status === "present") {
-      return `${base} bg-[#F9D97B] text-[#3C2E35] border-transparent flex-1 shadow-2xs hover:brightness-105`;
+      return `${base} ${widthClass} bg-[#F9D97B] text-[#3C2E35] border-transparent shadow-2xs`;
     }
     if (status === "absent") {
-      return `${base} bg-[#D9D4DC] text-[#3C2E35] border-transparent flex-1 opacity-90`;
+      return `${base} ${widthClass} bg-[#D9D4DC] text-[#3C2E35] border-transparent opacity-85`;
     }
 
     // Default unused key
-    return `${base} bg-white text-[#3C2E35] border border-[#EEDFE4] hover:bg-pink-50/50 hover:border-pink-300 flex-1 shadow-2xs`;
+    return `${base} ${widthClass} bg-white text-[#3C2E35] border border-[#EEDFE4] hover:bg-pink-50/50 shadow-2xs`;
   };
 
   return (
     <div
-      className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto px-1 sm:px-3 py-2 flex flex-col gap-1.5 md:gap-2 z-10"
+      className="w-full flex flex-col justify-center items-center gap-1 sm:gap-1.5 z-10 px-0.5"
       role="group"
       aria-label="Keyboard"
     >
       {KEYBOARD_ROWS.map((row, rowIdx) => (
-        <div key={rowIdx} className="flex justify-center gap-1 sm:gap-1.5 md:gap-2 w-full">
+        <div key={rowIdx} className="flex justify-center gap-1 sm:gap-1.5 w-full">
           {row.map((key) => {
             return (
               <button
@@ -99,13 +101,9 @@ export default function Keyboard({
               >
                 {key === "BACKSPACE" ? (
                   <svg
-                    className="w-5 h-5 md:w-6 md:h-6 text-[#3C2E35]"
+                    className="w-4 h-4 stroke-current fill-none"
                     viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                    strokeWidth="2.5"
                   >
                     <path d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" />
                     <line x1="18" y1="9" x2="12" y2="15" />

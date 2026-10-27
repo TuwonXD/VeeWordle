@@ -5,9 +5,9 @@
 export function downloadIcsFile(event) {
   const {
     title = "Our Date 💗",
-    description = "Celebrating our 1st month of being together officially! Matcha -> Food trip -> Movies -> Pop-ups at Nuvali -> Photobooth!",
+    description = "Celebrating our 1st month of being together officially! Food trip -> Pop-ups at Nuvali -> Matcha -> Picnic -> Photobooth!",
     location = "Nuvali & our favorite date spots",
-    date = "2026-11-03", // YYYY-MM-DD
+    date = "2026-11-07", // YYYY-MM-DD
   } = event;
 
   // Format dates: YYYYMMDD
@@ -52,7 +52,7 @@ export function downloadIcsFile(event) {
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.setAttribute("download", "OurDate-November3-2026.ics");
+  link.setAttribute("download", "OurDate-November7-2026.ics");
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -62,9 +62,9 @@ export function downloadIcsFile(event) {
 export function getGoogleCalendarUrl(event) {
   const {
     title = "Our Date 💗",
-    description = "Celebrating our 1st month of being together officially! Matcha -> Food trip -> Movies -> Pop-ups at Nuvali -> Photobooth!",
+    description = "Celebrating our 1st month of being together officially! Food trip -> Pop-ups at Nuvali -> Matcha -> Picnic -> Photobooth!",
     location = "Nuvali & our favorite date spots",
-    date = "2026-11-03",
+    date = "2026-11-07",
   } = event;
 
   const startDateStr = date.replace(/-/g, "");
@@ -85,4 +85,3 @@ export function getGoogleCalendarUrl(event) {
 
   return `https://calendar.google.com/calendar/render?${params.toString()}`;
 }
-

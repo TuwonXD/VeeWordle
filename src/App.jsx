@@ -8,7 +8,7 @@ import Question from "./components/Question";
 import SavedDate from "./components/SavedDate";
 import { dateConfig } from "./config/dateConfig";
 
-const STORAGE_KEY = "veewordle_save_state_v4";
+const STORAGE_KEY = "veewordle_save_state_v8";
 
 export default function App() {
   const [screen, setScreen] = useState("start"); // 'start' | 'puzzle' | 'celebration' | 'question' | 'yes'
@@ -94,8 +94,8 @@ export default function App() {
   const currentPuzzle = dateConfig.puzzles[currentPuzzleIndex];
 
   return (
-    <div className="relative min-h-screen flex flex-col justify-between bg-[#FFFDF9] text-[#3C2E35] selection:bg-pink-200 selection:text-pink-900 w-full overflow-x-hidden">
-      {/* Header present across all screens */}
+    <div className="w-full h-[100dvh] md:h-screen max-h-screen flex flex-col justify-between bg-[#FFFDF9] text-[#3C2E35] selection:bg-pink-200 selection:text-pink-900 overflow-hidden select-none">
+      {/* Top Header matching Figma ("a little us") */}
       <Header
         onReset={handleReset}
         screen={screen}
@@ -103,8 +103,8 @@ export default function App() {
         solvedPuzzles={solvedPuzzles}
       />
 
-      {/* Main Full-Area Responsive Content View */}
-      <main className="flex-1 flex flex-col justify-center items-center w-full px-2 sm:px-4 md:px-8 py-2 md:py-6">
+      {/* Main Content Viewport */}
+      <main className="flex-1 w-full max-w-7xl mx-auto px-3 sm:px-6 md:px-10 flex flex-col justify-center items-center overflow-hidden">
         <AnimatePresence mode="wait">
           {screen === "start" && (
             <StartScreen key="start" onStart={handleStart} />
@@ -136,6 +136,14 @@ export default function App() {
           )}
         </AnimatePresence>
       </main>
+
+      {/* Footer matching Figma */}
+      <footer className="h-[28px] sm:h-[34px] shrink-0 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-14 flex items-center justify-between text-[11px] text-[#A69AA1] select-none">
+        <span>{dateConfig.footerText}</span>
+        <span className="hidden sm:inline-block font-semibold tracking-wider text-[#8D7B85] uppercase text-[10px]">
+          {dateConfig.footerRight}
+        </span>
+      </footer>
     </div>
   );
 }
