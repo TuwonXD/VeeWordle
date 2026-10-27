@@ -33,7 +33,7 @@ export default function SavedDate() {
     switch (iconType) {
       case "coffee":
         return (
-          <svg className="w-5 h-5 text-[#DE4377]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#DE4377]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
             <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
             <line x1="6" y1="1" x2="6" y2="4" />
@@ -43,20 +43,20 @@ export default function SavedDate() {
         );
       case "cutlery":
         return (
-          <svg className="w-5 h-5 text-[#DE4377]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#DE4377]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M18 2v20M18 2a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3M6 2v20M3 2v6a3 3 0 0 0 6 0V2" />
           </svg>
         );
       case "basket":
         return (
-          <svg className="w-5 h-5 text-[#DE4377]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#DE4377]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M4 10h16l-2 10H6L4 10z" />
             <path d="M8 10V6a4 4 0 0 1 8 0v4" />
           </svg>
         );
       case "bag":
         return (
-          <svg className="w-5 h-5 text-[#DE4377]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#DE4377]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
             <line x1="3" y1="6" x2="21" y2="6" />
             <path d="M16 10a4 4 0 0 1-8 0" />
@@ -64,7 +64,7 @@ export default function SavedDate() {
         );
       case "camera":
         return (
-          <svg className="w-5 h-5 text-[#DE4377]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#DE4377]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
             <circle cx="12" cy="13" r="4" />
           </svg>
@@ -80,13 +80,14 @@ export default function SavedDate() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.25 }}
-      className="w-full flex-1 flex flex-col justify-between md:justify-center items-center select-none overflow-hidden my-auto py-2"
+      className="w-full flex-1 flex flex-col justify-between md:justify-center items-center select-none overflow-hidden my-auto py-1 sm:py-2"
     >
       {/* ============================================================== */}
       {/* MOBILE LAYOUT (< 768px): Single Column, Zero Scroll            */}
       {/* ============================================================== */}
       <div className="flex md:hidden flex-col justify-between items-center text-center w-full max-w-[390px] h-full px-4 py-1">
         <div className="flex flex-col items-center my-auto w-full">
+          {/* Top hearts */}
           <div className="flex items-center gap-1 mb-1">
             <span className="text-[#F2A7BC] text-xs">♥</span>
             <span className="text-[#DE4377] text-sm">♥</span>
@@ -97,7 +98,7 @@ export default function SavedDate() {
             {yesScreen.kicker}
           </span>
 
-          <h1 className="text-2xl font-black text-[#3C2E35] tracking-tight mb-1">
+          <h1 className="text-2xl font-black text-[#3C2E35] tracking-tight mb-0.5">
             {yesScreen.title}
           </h1>
 
@@ -106,7 +107,7 @@ export default function SavedDate() {
           </p>
 
           {/* Date Highlight Card */}
-          <div className="bg-[#FDECEF] rounded-2xl p-2.5 flex items-center gap-2.5 w-full text-left mb-2.5 border border-pink-200/60 shadow-2xs">
+          <div className="bg-[#FDECEF] rounded-2xl p-2.5 flex items-center gap-2.5 w-full text-left mb-2 border border-pink-200/60 shadow-2xs">
             <div className="w-9 h-9 rounded-xl bg-white flex items-center justify-center text-[#DE4377] shrink-0 shadow-2xs">
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <rect x="3" y="4" width="18" height="18" rx="3" ry="3" />
@@ -131,7 +132,7 @@ export default function SavedDate() {
             <motion.button
               whileTap={{ scale: 0.98 }}
               onClick={handleDownloadIcs}
-              className="w-full h-[40px] bg-[#DE4377] hover:bg-[#C93667] text-white text-xs font-black rounded-xl shadow-sm transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+              className="w-full h-[38px] bg-[#DE4377] hover:bg-[#C93667] text-white text-xs font-black rounded-xl shadow-sm transition-all flex items-center justify-center gap-1.5 cursor-pointer"
             >
               <span>{downloaded ? "Saved to Calendar! 💕" : yesScreen.buttonText}</span>
               <svg className="w-3.5 h-3.5 text-white stroke-current fill-none" viewBox="0 0 24 24" strokeWidth="2.5">
@@ -150,24 +151,27 @@ export default function SavedDate() {
             </a>
           </div>
 
-          {/* 5 Stops Mini List */}
-          <div className="w-full bg-white rounded-2xl p-2 border border-pink-100 flex flex-col gap-1 text-left">
-            <div className="flex items-center justify-between px-1">
-              <span className="text-[10px] font-black text-[#3C2E35]">Our plans</span>
+          {/* 5 Stops Card with Details (matching desktop with title & timeVenue) */}
+          <div className="w-full bg-white rounded-2xl p-2.5 border border-pink-100 flex flex-col gap-1.5 text-left shadow-2xs">
+            <div className="flex items-center justify-between px-1 pb-1 border-b border-pink-50">
+              <span className="text-xs font-black text-[#3C2E35]">Our plans</span>
               <span className="text-[#DE4377] text-xs">♥</span>
             </div>
-            {itinerary.items.map((item, index) => (
-              <div key={item.id} className="flex items-center gap-2 p-1 rounded-lg hover:bg-pink-50/40">
-                <div className="w-6 h-6 rounded-lg bg-[#FDECEF] flex items-center justify-center shrink-0">
+            {itinerary.items.map((item) => (
+              <div key={item.id} className="flex items-center gap-2.5 p-1 rounded-xl hover:bg-pink-50/40">
+                <div className="w-8 h-8 rounded-xl bg-[#FDECEF] flex items-center justify-center shrink-0 shadow-2xs">
                   {renderIcon(item.icon)}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <span className="text-xs font-bold text-[#3C2E35] block truncate leading-tight">
+                  <span className="text-xs font-black text-[#3C2E35] block truncate leading-tight">
                     {item.title}
                   </span>
+                  <span className="text-[10px] text-[#8D7B85] font-medium block truncate leading-tight mt-0.5">
+                    {item.timeVenue}
+                  </span>
                 </div>
-                <span className="text-[8px] font-bold text-[#DE4377] bg-[#FDECEF] px-1.5 py-0.5 rounded-full">
-                  0{index + 1}
+                <span className="text-[#F2A7BC] text-xs shrink-0 pr-1">
+                  ✧
                 </span>
               </div>
             ))}

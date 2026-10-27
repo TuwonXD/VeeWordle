@@ -4,18 +4,18 @@
  */
 
 export const dateConfig = {
-  appName: "a little us",
+  appName: "VeeWordle",
   headerTagline: "A little love, in five clues",
   footerText: "made with love, just for you",
   footerRight: "OUR LITTLE NOVEMBER STORY · 2026",
 
   // 1. Start Screen
   startScreen: {
-    kicker: "FIVE LITTLE CLUES. ONE BIG QUESTION.",
-    title: "I made you something",
-    description: "A little game about our favorite things. Follow the clues — there's something sweet waiting at the end.",
+    kicker: "hello langga",
+    title: "little game lang po",
+    description: "madali lang yung mga puzzles promise",
     buttonText: "Start",
-    subtext: "5 puzzles · all about us · no rush",
+    subtext: "click the button to start",
     pillBadge: "a small surprise, a whole lot of us",
   },
 
@@ -108,8 +108,8 @@ export const dateConfig = {
   // 5. Success / She Said Yes Screen
   yesScreen: {
     kicker: "HERE'S TO OUR NEXT CHAPTER",
-    title: "She said yes!!",
-    subtitle: "A whole day to look forward to. Just you, me, and our favorite things.",
+    title: "See you Langga!",
+    subtitle: "A whole day to look forward to. Just you and me :))",
     badge: "IT'S A DATE",
     dateText: "November 7, 2026",
     buttonText: "Save the date",
@@ -128,31 +128,31 @@ export const dateConfig = {
       {
         id: "foodtrip",
         title: "Food trip",
-        timeVenue: "Time TBD · Venue TBD",
+        timeVenue: "Marugame, Solenad",
         icon: "cutlery",
       },
       {
         id: "popups",
         title: "Pop-ups at Nuvali",
-        timeVenue: "Time TBD · Venue TBD",
+        timeVenue: "Solenad Popups",
         icon: "bag",
       },
       {
         id: "matcha",
         title: "Matcha",
-        timeVenue: "Time TBD · Venue TBD",
+        timeVenue: "Solenad Popups",
         icon: "coffee",
       },
       {
         id: "picnic",
         title: "Picnic",
-        timeVenue: "Time TBD · Venue TBD",
+        timeVenue: "Nuvali",
         icon: "basket",
       },
       {
         id: "photobooth",
         title: "Photobooth",
-        timeVenue: "Time TBD · Venue TBD",
+        timeVenue: "Vistamall",
         icon: "camera",
       },
     ],
